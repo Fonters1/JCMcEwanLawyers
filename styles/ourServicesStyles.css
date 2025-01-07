@@ -74,7 +74,7 @@
     flex-direction: column;
     gap: 2rem;
     margin: 4rem auto;
-    max-width: 800px; /* Reduced from 1200px for better readability */
+    max-width: 800px;
 }
 
 .service-card {
@@ -271,27 +271,28 @@
         padding: 2rem 1rem;
     }
     
+    .testimonial-carousel {
+        min-height: 600px;
+    }
+
     .testimonial-card {
-        padding: 1.5rem;
+        padding: 2rem;
+        min-height: 550px;
     }
 
     .testimonial-text {
-        font-size: 1rem;
-        margin-bottom: 0.75rem;
+        font-size: 1.1rem; 
+        margin-bottom: 1rem;
+        line-height: 1.7;
     }
 
     .testimonial-author {
-        font-size: 1rem;
-        margin-top: 1rem;
-    }
-
-    .carousel-buttons {
+        font-size: 1.1rem;
         margin-top: 1.5rem;
     }
 
-    .carousel-button {
-        width: 40px;
-        height: 40px;
+    .carousel-buttons {
+        margin-top: 2rem;
     }
 }
 
@@ -306,16 +307,22 @@
     }
 
     .testimonials-section {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 0.75rem;
     }
     
+    .testimonial-carousel {
+        min-height: 700px;
+    }
+
     .testimonial-card {
-        padding: 1.25rem;
+        padding: 1.75rem;
+        min-height: 650px;
     }
 
     .testimonial-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
     }
 
     .section-title {
@@ -323,7 +330,7 @@
         font-size: 1.75rem;
     }
 
-    .testimonial-carousel {
-        min-height: 400px;
+    .testimonial-container {
+        width: 95%;
     }
 }
