@@ -316,7 +316,7 @@
 
     .testimonial-card {
         padding: 1.75rem;
-        min-height: 1650px;
+        min-height: 650px;
     }
 
     .testimonial-text {
@@ -332,5 +332,12 @@
 
     .testimonial-container {
         width: 95%;
+    }
+}
+
+@media (max-width: 300px) {
+    .testimonial-card {
+        padding: 1.75rem;
+        min-height: 1650px;
     }
 }
