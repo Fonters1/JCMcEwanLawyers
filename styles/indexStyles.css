@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #0f172a;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #2c3e50;
+    --light-text: #ecf0f1;
+    --background-color: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.heroSection {
+    position: relative;
+    height: 90vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.3)
+    );
+    z-index: 1;
+}
+
+.heroImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    animation: zoomOut 20s ease-in-out infinite alternate;
+}
+
+.heroContent {
+    position: absolute;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--light-text);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.heroBoldText {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.heroNormalText {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: clamp(0.8rem, 1.5vw, 1rem) clamp(1.5rem, 2vw, 2rem);
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    background-color: #255f8f;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Mission Section */
+.missionSection {
+    padding: 6rem 0;
+    background-color: #f8f9fa;
+}
+
+.sectionTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.missionText {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+/* Values Section */
+.valuesSection {
+    padding: 6rem 0;
+}
+
+.valueCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.valueCard {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+    cursor: default;
+}
+
+.valueCard:hover {
+    transform: translateY(-5px);
+}
+
+.valueImageWrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.valueImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.valueCard:hover .valueImage {
+    transform: scale(1.1);
+}
+
+.valueContent {
+    padding: 1.5rem;
+}
+
+.valueContent h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.valueContent p {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes zoomOut {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .heroContent {
+        padding: 1rem;
+        width: 95%; /* Slightly wider on mobile */
+    }
+
+    .heroBoldText {
+        font-size: clamp(1.8rem, 3vw, 2.5rem); /* Further reduced for mobile */
+        margin-bottom: 1rem;
+    }
+
+    .heroNormalText {
+        font-size: clamp(0.9rem, 1.2vw, 1rem);
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heroSection {
+        height: 80vh;
+        min-height: 400px; /* Reduced minimum height for very small screens */
+    }
+
+    .heroBoldText {
+        font-size: clamp(1.5rem, 2.5vw, 2rem); /* Even smaller for mobile */
+    }
+
+    .ctaButton {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
+    }
+}
