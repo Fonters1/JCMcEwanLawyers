@@ -216,6 +216,7 @@
     font-weight: 600;
     color: var(--primary-color);
     margin-top: auto;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
 /* Carousel Button Styles */
@@ -267,11 +268,30 @@
     }
 
     .testimonials-section {
-        padding: 3rem 1.5rem;
+        padding: 2rem 1rem;
     }
     
     .testimonial-card {
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .testimonial-author {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .carousel-buttons {
+        margin-top: 1.5rem;
+    }
+
+    .carousel-button {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -286,14 +306,24 @@
     }
 
     .testimonials-section {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
     
     .testimonial-card {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
-    
-    .carousel-button {
-        padding: 0.5rem 1rem;
+
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .testimonial-carousel {
+        min-height: 400px;
     }
 }
